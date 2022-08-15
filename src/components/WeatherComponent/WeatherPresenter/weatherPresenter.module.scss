@@ -1,0 +1,26 @@
+.weather-presenter {
+  padding: 2rem;
+
+  .city-info {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 1rem;
+    background-color: rgb(255, 255, 255);
+
+    > :first-child {
+      flex-grow: 3;
+    }
+  }
+
+  .weather-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+    > :first-child {
+      flex-grow: 1.5;
+      background-color: rgb(255 235 219);
+    }
+  }
+}

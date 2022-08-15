@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.7s ease-in;
+}
+
+body, html {
+  background-color: #d3d8e2;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+
+input, select {
+  all: unset;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.5rem;
+  width: min(90%, 250px);
+  background-color: rgb(238, 230, 230);
+  color: black;
+  border-radius: 3px;
+  box-shadow: 1px 1px rgb(85, 87, 87);
+
+  &:focus-visible {
+    outline: 2px solid rgb(18, 19, 18);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: unset;
+}

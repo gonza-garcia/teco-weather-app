@@ -1,0 +1,13 @@
+.city-card {
+  padding: 2.2rem;
+
+  .city-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .city-card {
+    padding: calc(1px + 1.5625vw);
+  }
+}
