@@ -2,11 +2,34 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About the development process
+You can see this app running on Heroku [HERE](https://github.com/facebook/create-react-app)
 
-In the project directory, you can run:
+## About the development process
+First I read the Open Weather App Documentation, and after some research and discovering that besides the weather API, it also has a Geo Localization Service; I decided that I wanted the user to be able to type into an input any city (not just selecting from a fixed list of 5), and this would trigger the Geo Localization service to search if that city exists and then trigger the weather API to display the weather for that city´s current day and the next 5 days.
+I also included the fixed default list of five cities to select from, and additionally if you type a city that exists but isn´t on the list, it will add that city to the fixed list.
+I didn´t want the api key to be exposed so I will include instructions below on how to get your own api key to put in the .env file if you want to run it locally. (Although I then realized that the key was gonna be exposed anyways because the Open weather app service requires this key to go as a url parameter instead of in the body of a POST request).
+I decided to host the app in heroku.
+I encountered lots of issues to configure jest correctly so the tests will fail. I went into looking at this issue and could´nt find a solution. Theoretically when you bootstrap your app with Creat React App, it should work out of the box, buy it wasn´t my case and eventually I decided I was losing time trying to figure it out. (More on Known Issues Section).
 
-### `npm start`
+
+## Known issues
+### `yarn jest`
+
+For some reason I couldn´t setup the jest configuration correctly and it gives an error on all the tests that import a scss file. I couldn´t make it work and I felt I was losing too much time on the subject. With more time maybe I could make it work but I decided to create some test files anyway although they won´t pass until this issue is fixed.
+
+## Instructions to run the app locally
+Clone this repo and inside the project directory run:
+
+### `yarn`
+
+Create a .env file in the root directory and put this variable there:
+
+### `REACT_APP_WEATHER_KEY=YOURKEY`
+
+Where YOURKEY should be your Open Weather Map api Key. You can obtain this key by creating a free account in [Open Weather Page](https://openweathermap.org/) and going to My API keys by clicking in your account name at the top right once you are logged in.
+
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,12 +37,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -28,43 +46,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
