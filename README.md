@@ -3,14 +3,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## About the development process
-You can see this app running on Heroku [HERE](https://github.com/facebook/create-react-app)
+You can see this app running on Heroku [HERE](https://teco-weather-app.herokuapp.com/)
 
 ## About the development process
-First I read the Open Weather App Documentation, and after some research and discovering that besides the weather API, it also has a Geo Localization Service; I decided that I wanted the user to be able to type into an input any city (not just selecting from a fixed list of 5), and this would trigger the Geo Localization service to search if that city exists and then trigger the weather API to display the weather for that city´s current day and the next 5 days.
+First I read the Open Weather App Documentation, and after some research and discovering that besides the weather API, it also has a Geo Localization Service; I decided that I wanted the user to be able to type into an input any city (not just selecting from a fixed list of 5), and this would trigger the Geo Localization service to search if that city exists and then trigger the weather API to display the weather for that city´s current day and the next 5 days.\
 I also included the fixed default list of five cities to select from, and additionally if you type a city that exists but isn´t on the list, it will add that city to the fixed list.
-I didn´t want the api key to be exposed so I will include instructions below on how to get your own api key to put in the .env file if you want to run it locally. (Although I then realized that the key was gonna be exposed anyways because the Open weather app service requires this key to go as a url parameter instead of in the body of a POST request).
-I decided to host the app in heroku.
-I encountered lots of issues to configure jest correctly so the tests will fail. I went into looking at this issue and could´nt find a solution. Theoretically when you bootstrap your app with Creat React App, it should work out of the box, buy it wasn´t my case and eventually I decided I was losing time trying to figure it out. (More on Known Issues Section).
+I didn´t want the api key to be exposed so I will include instructions below on how to get your own api key to put in the .env file if you want to run it locally. (Although I then realized that the key was gonna be exposed anyways because the Open weather app service requires this key to go as a url parameter instead of in the body of a POST request).\
+I decided to host the app in heroku.\
+I encountered lots of issues to configure jest correctly so the tests will fail. I went into looking at this issue and could´nt find a solution. Theoretically when you bootstrap your app with Creat React App, it should work out of the box, buy it wasn´t my case and eventually I decided I was losing time trying to figure it out. (More on Known Issues Section).\
 
 
 ## Known issues
