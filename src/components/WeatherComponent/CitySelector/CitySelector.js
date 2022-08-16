@@ -14,7 +14,10 @@ const CitySelector = ({ handleInputChange, placesList }) => {
 
   return (
     <section className={styles['city-selector']}>
-      <label htmlFor={inputId}>
+      <label
+        className={styles.disclaimer}
+        htmlFor={inputId}
+      >
         Buscá tu lugar en el mundo:
       </label>
 
@@ -27,7 +30,9 @@ const CitySelector = ({ handleInputChange, placesList }) => {
         placeholder="Escribí acá"
       />
 
-      O elegí de la lista:
+      <span className={styles.disclaimer}>
+        O elegí de la lista:
+      </span>
 
       <div className={styles.lista}>
         {placesList.map((place) => (

@@ -11,6 +11,8 @@ First I read the Open Weather App Documentation, and after some research and dis
 I also included the fixed default list of five cities to select from, and additionally if you type a city that exists but isn´t on the list, it will add that city to the fixed list.
 I didn´t want the api key to be exposed so I will include instructions below on how to get your own api key to put in the .env file if you want to run it locally. (Although I then realized that the key was gonna be exposed anyways because the Open weather app service requires this key to go as a url parameter instead of in the body of a POST request).\
 \
+I´m very sorry about the styling. I´m not a designer and have very poor taste picking colors and designing a layout.
+\
 I decided to host the app in heroku.\
 \
 I encountered lots of issues to configure jest correctly so the tests will fail. I went into looking at this issue and could´nt find a solution. Theoretically when you bootstrap your app with Creat React App, it should work out of the box, buy it wasn´t my case and eventually I decided I was losing time trying to figure it out. (More on Known Issues Section).\
