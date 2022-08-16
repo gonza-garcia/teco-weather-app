@@ -1,5 +1,6 @@
 import { useState, useId } from 'react';
 import PropTypes from 'prop-types';
+import Button from '../Button/Button';
 import useDebounce from '../../../customHooks/useDebounce';
 import styles from './citySelector.module.scss';
 import { getRandomId } from '../../../utils/helpers';
@@ -30,13 +31,12 @@ const CitySelector = ({ handleInputChange, placesList }) => {
 
       <div className={styles.lista}>
         {placesList.map((place) => (
-          <button
-            type="button"
-            onClick={() => setInputValue(place)}
+          <Button
+            text={place}
+            handleClick={() => setInputValue(place)}
+            variant="pill"
             key={getRandomId()}
-          >
-            {place}
-          </button>
+          />
         ))}
       </div>
     </section>

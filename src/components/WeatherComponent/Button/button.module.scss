@@ -1,0 +1,20 @@
+.button {
+  all: unset;
+  
+  &:focus-visible {
+    outline: 2px solid rgb(18, 19, 18);
+  }
+}
+
+.pill {
+  display: inline-block;
+  margin: 0.25rem;
+  color: white;
+  background-color: rgb(23, 26, 26);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px rgb(216, 215, 215) solid;
+  border-radius: 3rem;
+  box-shadow: 1px 1px rgb(85, 87, 87);
+  padding: 0.25rem 0.5rem;
+}

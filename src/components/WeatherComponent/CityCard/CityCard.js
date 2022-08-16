@@ -7,17 +7,21 @@ const CityCard = ({ city }) => {
     name, state, country, lat, lon,
   } = city;
 
+  if (!name) {
+    return (
+      <span className={styles['null-city']}>
+        No city found or selected
+      </span>
+    );
+  }
+
   return (
     <article className={styles['city-card']}>
-      {name && <h2>{name}</h2>}
-      {
-        name && (
-          <div className={styles['city-container']}>
-            {state && <h3>{`${state}, ${country}`}</h3>}
-            {(lat && lon) && <h3>{`Latitud: ${lat}`} <br /> {`Longitud: ${lon}`}</h3>}
-          </div>
-        )
-      }
+      <h2>{name}</h2>
+      <div className={styles['city-container']}>
+        {state && <h3>{`${state}, ${country}`}</h3>}
+        {(lat && lon) && <h3>{`Latitud: ${lat}`} <br /> {`Longitud: ${lon}`}</h3>}
+      </div>
     </article>
   );
 };

@@ -4,9 +4,32 @@
 }
 
 body, html {
-  background-color: #d3d8e2;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #282e38;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 16px;
+  font-weight: 600;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  width: 100%;
+  background-color: rgb(14 100 158);
+  color: #d8dde7;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+  min-height: 13vh;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+  width: min(90%, 1023px);
+  margin-inline: auto;
+  min-height: 74vh;
 }
 
 input, select {

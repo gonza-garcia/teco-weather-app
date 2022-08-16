@@ -2,27 +2,10 @@
   display: grid;
   place-items: center;
   grid-gap: 0.5rem;
-  padding: 1rem;
+  min-height: 100%;
 
   label {
     margin-inline: 0.5rem;
-  }
-
-  button {
-    all: unset;
-    display: inline-block;
-    margin: 0.25rem;
-    color: blue;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border: 1px rgb(216, 215, 215) solid;
-    border-radius: 3rem;
-    box-shadow: 1px 1px rgb(85, 87, 87);
-    padding: 0.25rem 0.5rem;
-
-    &:focus-visible {
-      outline: 2px solid rgb(18, 19, 18);
-    }
   }
 
   .input {

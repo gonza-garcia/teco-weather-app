@@ -5,8 +5,12 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
     margin-bottom: 1rem;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255 190 0);
+    border-radius: 0.9rem;
+
+    padding: 1.8rem 0.5rem;
 
     > :first-child {
       flex-grow: 3;
@@ -20,7 +24,7 @@
 
     > :first-child {
       flex-grow: 1.5;
-      background-color: rgb(255 235 219);
+      background-color: rgb(255 196 148);
     }
   }
 }

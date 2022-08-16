@@ -1,9 +1,18 @@
 .city-card {
   padding: 2.2rem;
+  border: 1px rgb(170, 170, 170) solid;
+  border-radius: 3rem;
+  box-shadow: 1px 1px rgb(85, 87, 87);
+  background-color: rgb(18 20 20);
+  color: white;
 
   .city-container {
     padding: 1rem;
   }
+}
+
+.null-city {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 300px) {
