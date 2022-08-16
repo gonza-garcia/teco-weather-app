@@ -16,14 +16,14 @@ I´m very sorry about the styling. I´m not a designer and have very poor taste 
 I decided to host the app in heroku.\
 \
 I encountered lots of issues to configure jest correctly so the tests will fail. I went into looking at this issue and could´nt find a solution. Theoretically when you bootstrap your app with Creat React App, it should work out of the box, buy it wasn´t my case and eventually I decided I was losing time trying to figure it out. (More on Known Issues Section).\
-EDIT: I fixed it by adding some configurations to the jest.config.js
+EDIT: I fixed it by adding some configurations to the jest.config.js. Sadly I lost a lot of time fixing it and don´t have any more time to include the tests I would have liked to.
 
 
 ## Testing and Known issues(FIXED)
 ### `yarn jest`
 
 For some reason I couldn´t setup the jest configuration correctly and it gives an error on all the tests that import a scss file. I couldn´t make it work and I felt I was losing too much time on the subject. With more time maybe I could make it work but I decided to create some test files anyway although they won´t pass until this issue is fixed.\
-EDIT: I fixed the issue with the tests.
+EDIT: I fixed the issue with the tests. Sadly I lost a lot of time fixing it and don´t have any more time to include the tests I would have liked to.
 
 ## Previous requirement to run the app locally
 Create a .env file in the root directory and put this variable there:
